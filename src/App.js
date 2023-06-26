@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import {Typography,Button, TextField} from '@mui/material'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Typography variant="h1" component={"h1"} sx={{color:"red"}}>Dheeraj Singh</Typography>
+       <Button variant="contained" color="success" sx={{margin:"30px"}}>
+        Click ME
+       </Button>
+       <Button variant="text" disabled>
+        Click ME
+       </Button>
+       <Button variant="outlined" onClick={()=>alert("you clicked")} size='large'>
+        Click ME for action
+       </Button>
+       <br></br>
+       {/* <input type="text" placeholder='name' /> */}
+       <TextField type='text' placeholder='name' variant='standard' sx={{margin:"30px"}}/>
+       <TextField type='text' placeholder='name' variant='outlined' sx={{margin:"30px"}}/>
+       <TextField type='text' placeholder='name' variant='filled' sx={{margin:"30px"}}/>
     </div>
   );
 }
